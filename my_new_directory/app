@@ -1,0 +1,26 @@
+puts "Hi, welcome to the rental car service fee checker"
+puts "enter your age"
+age = gets.strip.to_i
+puts "you are #{age} years old"
+
+if age < 21
+puts "sorry you are not old enough for a rental"
+elsif age <= 25
+puts "no additional fee"
+else puts "How many days are you renting for?"
+days_renting_for = gets.strip.to_i
+puts "Please enter two letter state code"
+state = gets.strip
+fee_per_day= 20
+fee = days_renting_for * fee_per_day
+case state
+when "MI"
+fee += 20
+when "NY"
+fee += 25
+end
+puts "you owe $#{fee} for a total of #{days_renting_for} days"
+end
+
+
+
